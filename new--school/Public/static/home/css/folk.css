@@ -1,0 +1,152 @@
+@charset "utf-8";
+body{
+    margin:0;
+    padding:0;
+    background:#FFFFFF;
+    font-family: "微软雅黑";
+}
+.hongbao01{
+    width:1920px;
+    height:480px;
+}
+.hongbao02{
+    width:1920px;
+    height:407px;
+}
+.hongbao03{
+    width:1920px;
+    height:541px;
+}
+.hongbao04{
+    width:1920px;
+    height:667px;
+}
+.hongbao05{
+    width:1920px;
+    height:705px;
+}
+.hongbao06{
+    width:1920px;
+    height:700px;
+}
+.haoya01{
+    width:1920px;
+    height:492px;
+}
+.haoya02{
+    width:1920px;
+    height:408px;
+}
+.haoya03{
+    width:1920px;
+    height:526px;
+}
+.haoya04{
+    width:1920px;
+    height:684px;
+    background: url('../image/zt/zt2_04.jpg')no-repeat;
+    background-size:1920px 684px;
+}
+.haoya05{
+    width:1920px;
+    height:691px;
+}
+.haoya06{
+    width:1920px;
+    height:700px;
+}
+.image-box{
+    width:1100px;
+    height:570px;
+    margin:0 auto;
+    padding-top:100px;
+    position:relative;
+}
+.image-box>div{
+    float:right;
+}
+.image-box-con{
+
+}
+.image-box-list{
+    width:276px;
+    height:489px;
+}
+.list-image01{
+    width:276px;
+    height:163px;
+    background: url('../image/zt/zt2_021.jpg') no-repeat;
+    background-size:276px 163px;
+}
+.list-image02{
+    width:276px;
+    height:163px;
+    background: url('../image/zt/zt2_022.jpg') no-repeat;
+    background-size:276px 163px;
+}
+.list-image03{
+    width:276px;
+    height:163px;
+    background: url('../image/zt/zt2_023.jpg') no-repeat;
+    background-size:276px 163px;
+}
+.list-image01.on{
+    width:276px;
+    height:163px;
+    background: url('../image/zt/zt2_011.jpg') no-repeat;
+    background-size:276px 163px;
+    border:0;
+}
+.list-image02.on{
+    width:276px;
+    height:163px;
+    background: url('../image/zt/zt2_012.jpg') no-repeat;
+    background-size:276px 163px;
+    border:0;
+}
+.list-image03.on{
+    width:276px;
+    height:163px;
+    background: url('../image/zt/zt2_013.jpg') no-repeat;
+    background-size:276px 163px;
+    border:0;
+}
+.image-box-con>div{
+    display:none;
+}
+.liyouwei{
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+
+
+.meibai01{
+	width:1920px;
+    height:490px;
+}
+.meibai02{
+	width:1920px;
+    height:404px;
+}
+.meibai03{
+	width:1920px;
+    height:537px;
+}
+.meibai04{
+	width:1920px;
+    height:669px;
+}
+.meibai05{
+	width:1920px;
+    height:700px;
+}
+.meibai06{
+	width:1920px;
+    height:700px;
+}
+
+
+
+
+

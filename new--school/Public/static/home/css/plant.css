@@ -1,0 +1,176 @@
+@charset "utf-8";
+body{
+    margin:0;
+    padding:0;
+    background:#FFFFFF;
+    font-family: "微软雅黑";
+}
+.plant-01{
+    width:1920px;
+    height:492px;
+}
+.plant-02{
+    width:1920px;
+    height:60px;
+    position:relative;
+}
+.plant-03{
+    width:1920px;
+    height:500px;
+    background: #ffffff;
+}
+.plant-04{
+    width:1920px;
+    height:1219px;
+}
+.plant-05{
+    width:1920px;
+    height:1016px;
+}
+.plant-06{
+    width:1920px;
+    height:1016px;
+}
+.plant-07{
+    width:1920px;
+    height:1016px;
+}
+.plant-08{
+    width:1920px;
+    height:1016px;
+}
+.plant-09{
+    width:1920px;
+    height:1016px;
+}
+.plant-10{
+    width:1920px;
+    height:1016px;
+}
+.plant-11{
+    width:1920px;
+    height:694px;
+    position: relative;
+}
+.box-plant-one{
+    width:1104px;
+    height:402px;
+    margin:29px auto;
+}
+.box-plant-list ul{
+    padding:0;
+    margin:0;
+}
+.list-button{
+    float:left;
+    height:40px;
+    line-height:40px;
+    list-style:none;
+    text-align:center;
+}
+.list-button p{
+    padding:0;
+    margin:0;
+    color:#7d6654;
+    cursor: pointer;
+}
+.list-01{
+    background:url('../image/plant/op_03.jpg');
+}
+.list-02{
+    background:url('../image/plant/op_04.jpg');
+}
+.list-03{
+    background:url('../image/plant/op_05.jpg');
+}
+.list-04{
+    background:url('../image/plant/op_06.jpg');
+}
+.list-05{
+    background:url('../image/plant/op_07.jpg');
+}
+.box-plant-content{
+    width:1104px;
+    height:402px;
+}
+.box-plant-content>div{
+    display:none;
+}
+
+/* �ײ�tab�л� */
+.plant-box{
+    width:1008px;
+    height:383px;
+    position:absolute;
+    top:115px;
+    left:50%;
+    margin-left:-503px;
+}
+.plant-box-list{
+    width:1008px;
+    height:44px;
+}
+.plant-box-list ul{
+    padding:0;
+    margin:0;
+}
+.plant-box-list ul li{
+    list-style:none;
+    float:left;
+    width:200px;
+    height:43px;
+    line-height:43px;
+    background:#4d4d4d;
+    color:#ffffff;
+    text-align:center;
+    border-right:1px solid #ffffff;
+    border-bottom:1px solid #ffffff;
+    cursor:pointer;
+}
+.plant-box-list ul li p{
+    margin:0;
+}
+.plant-box-content>div{
+    display:none;
+}
+.bottom-button.ox{
+    background: #236a5a;
+}
+
+.bottom-button{
+    float:left;
+    width:200px;
+    height:43px;
+    line-height:43px;
+    background:#4d4d4d;
+    color:#ffffff;
+    text-align:center;
+    border-right:1px solid #ffffff;
+    border-bottom:1px solid #ffffff;
+    cursor:pointer;
+}
+.bottom-button p{
+	margin:0;
+}
+
+
+
+.nav-button{
+    position:absolute;
+    width:600px;
+    height:60px;
+    top:0;
+    left:50%;
+    margin-left:-300px;
+}
+.nav-button ul{
+    padding:0;
+    margin:0;
+}
+.nav-button ul li{
+    list-style:none;
+    float:left;
+    width:200px;
+    height:60px;
+    cursor: pointer;
+}

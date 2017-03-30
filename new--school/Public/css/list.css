@@ -1,0 +1,64 @@
+
+
+.warp{
+	width: 1280px;
+	margin: 0 auto;
+}
+.warp h3{
+	font-size:28px;
+	display: inline-block;
+	color: #595757;
+	border-bottom: 1px solid #595757;
+	line-height: 56px;
+	margin: 20px 0;
+}
+
+
+/*新闻图片*/
+/*瀑布流布局样式*/
+#lxf-box { position: relative; width: 1280px;}
+#lxf-box li { position: absolute; background: #fff;padding:10px 0; border: solid 1px #ccc;  left: 0px; top: 0;}
+h3 { padding-top: 8px; }
+/*img { width: 200px; height: auto; display: block; border: 0 }*/
+/*css3动画*/
+li { -webkit-transition: all .7s ease-out .1s; -moz-transition: all .7s ease-out; -o-transition: all .7s ease-out .1s; transition: all .7s ease-out .1s }
+
+
+
+
+.digg {
+	/*padding: 3px;  margin:px;  text-align: center*/
+	padding:15px 0;
+	margin: 20px 0 50px;
+	border-top: 1px solid #595757;
+}
+.digg a {
+	border: #595757 1px solid;
+	padding:5px;
+	color: #595757;
+	text-decoration: none;
+}
+.digg a:hover{
+	border: #a40000 1px solid;
+	background: #a40000;
+	padding:5px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.digg a:active {
+	BORDER-RIGHT: #000099 1px solid; BORDER-TOP: #000099 1px solid; BORDER-LEFT: #000099 1px solid; COLOR: #000; BORDER-BOTTOM: #000099 1px solid
+}
+.digg span.current{
+	border: #a40000 1px solid;
+	background: #a40000;
+	padding:5px;
+	color: #fff;
+}
+.digg span.disabled {
+	border: #595757 1px solid;
+	padding:5px;
+	color: #595757;
+	margin-right: 5px;
+}
+

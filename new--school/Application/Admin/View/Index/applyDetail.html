@@ -1,0 +1,227 @@
+<include file="Index/header" />
+<title>会员详情</title>
+<link href="__PUBLIC__/static/media/css/select2.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/dome1.css"/>
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+    <include file="Index/left_menu" />
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <!-- BEGIN PAGE HEADER-->
+            <div class="page-bar">
+                <ul class="page-breadcrumb">
+                    <li>
+                        <i class="fa fa-home"></i>
+                        <a href="{:U('Admin/Index/index')}">主页</a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="{:U('Admin/Index/index')}">会员管理</a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                </ul>
+            </div>
+            <!-- END PAGE HEADER-->
+
+            <!-- BEGIN PAGE CONTENT-->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Begin: life time stats -->
+                    <div class="portlet">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-gift"></i>会员管理
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div style="margin-bottom:10px;">
+                            </div>
+                            <div class="table-container tab">
+                                <div class="ta">
+                                    <p>
+                                        <span>初中学校</span>
+                                        <input type='text' name='school_name' value='{$detail.school_name}' readonly />
+                                    </p>
+                                    <div>
+                                        <span>姓&emsp;&emsp;名</span>
+                                        <input name='student_name' type="text" value='{$detail.student_name}' readonly />
+                                    </div>
+                                    <div>
+                                        <span>性&emsp;&emsp;别</span>
+                                        <input name='sex' type="radio" disabled class="rad" <if condition="$detail['sex'] eq 1"> checked='checked'</if> value="1"/><b>男</b>
+                                        <input name='sex' type="radio" disabled class="rad" <if condition="$detail['sex'] neq 1"> checked='checked'</if> value="2"/><b>女</b>
+                                    </div>
+                                    <div>
+                                        <span>民&emsp;&emsp;簇</span>
+                                        <input name='nation' type="text" value='{$detail.nation}' readonly/>
+                                    </div>
+                                    <div class="age">
+                                        <span>年&emsp;&emsp;龄</span>
+                                        <select name="age_year" id="" disabled>
+                                            <option value="1986" selected="selected">{$detail.age.0}年</option>
+                                        </select>
+                                        <select name="age_month" id="" disabled>
+                                            <option value="1" selected="selected">{$detail.age.1}月</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <span>联络手机</span>
+                                        <input name='phone' type="text" readonly value='{$detail.mobile}' />
+                                    </div>
+                                    <div>
+                                        <span>团&emsp;&emsp;员</span>
+                                        <input name='is_league' type="radio" disabled class="rad" <if condition="$detail['is_league_members'] eq 1"> checked='checked'</if> value="1"/><b>是</b>
+                                        <input name='is_league' type="radio" disabled class="rad" <if condition="$detail['is_league_members'] eq 2"> checked='checked'</if> value="2"/><b>否</b>
+                                    </div>
+                                    <div>
+                                        <span>担任职务</span>
+                                        <input name='duty' type="text" value='{$detail.duty}' readonly />
+                                    </div>
+                                    <div>
+                                        <span>健康状态</span>
+                                        <input name='health' type="text" value='{$detail.health}' readonly />
+                                    </div>
+                                    <div>
+                                        <span>家庭地址</span>
+                                        <input name='address' type="text" value='{$detail.family_address}' readonly />
+                                    </div>
+                                </div>
+                                <div class="term">
+                                    <div>
+                                        <p>初二第二学期综合成绩在年级的排名</p>
+                                        <div>
+                                            <span>期中</span>
+                                            <input name='junior_two_middle' type="text" value='{$detail.junior_two_score.middle}' readonly />
+                                        </div>
+                                        <div>
+                                            <span>期末</span>
+                                            <input name='junior_two_end' type="text" value='{$detail.junior_two_score.end}' readonly />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p>初二第二学期综合成绩在年级的排名</p>
+                                        <div>
+                                            <span>期中</span>
+                                            <input name='junior_three_middle' value='{$detail.junior_three_score.middle}' type="text" readonly />
+                                        </div>
+                                        <div>
+                                            <span>期末</span>
+                                            <input name='junior_three_end' value='{$detail.junior_three_score.end}' type="text" readonly />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="situation">
+                                    <h3>初三第一次县模拟考情况</h3>
+                                    <div>
+                                        <span>数学</span>
+                                        <input name='math' type="text" value='{$detail.math}' readonly />
+                                    </div>
+                                    <div>
+                                        <span>英语</span>
+                                        <input name='english' type="text" value='{$detail.english}' readonly />
+                                    </div>
+                                    <div>
+                                        <span>语文</span>
+                                        <input name='chinese' type="text" value='{$detail.chinese}' readonly />
+                                    </div>
+                                    <div>
+                                        <span>物理</span>
+                                        <input name='physical' type="text" value='{$detail.physical}' readonly />
+                                    </div>
+                                    <div>
+                                        <span>化学</span>
+                                        <input name='chemistry' type="text" value='{$detail.chemistry}' readonly />
+                                    </div>
+                                    <div>
+                                        <span>总分</span>
+                                        <input name='total' type="text" value='{$detail.total}' readonly />
+                                    </div>
+                                    <div>
+                                        <span>年级排名</span>
+                                        <input name='grade_ranking' type="text" value='{$detail.grade_ranking}' readonly />
+                                    </div>
+                                    <div>
+                                        <span>市县排名</span>
+                                        <input name='city_ranking' type="text"  value='{$detail.city_ranking}' readonly />
+                                    </div>
+                                </div>
+                                <div class="resume">
+                                    <h3>本人学习简历</h3>
+                                    <div>
+                                        <span>起止年月(小学起)</span>
+                                        <volist name="detail.learn_resume.date" id="learn_date">
+                                            <input name='learn_resume_date[]' type="text" value='{$learn_date}' readonly />
+                                        </volist>
+                                    </div>
+                                    <div class="cen">
+                                        <span>学习单位</span>
+                                        <volist name="detail.learn_resume.unit" id="learn_unit">
+                                            <input name='learn_resume_unit[]' type="text" value='{$learn_unit}' readonly />
+                                        </volist>
+                                    </div>
+                                    <div>
+                                        <span>证明人</span>
+                                        <volist name="detail.learn_resume.prove" id="learn_prove">
+                                            <input name='learn_resume_prove[]' type="text" value='{$learn_prove}' readonly />
+                                        </volist>
+                                    </div>
+                                </div>
+                                <div class="resume">
+                                    <h3>初中阶段获市县级及以上荣誉情况 <i>(按获奖级别从高到低排序)</i></h3>
+                                    <div>
+                                        <span>荣誉名称</span>
+                                        <volist name="detail.honor.name" id="honor_name">
+                                            <input name='honor_name[]' type="text" value='{$honor_name}' readonly />
+                                        </volist>
+                                    </div>
+                                    <div class="cen">
+                                        <span>发证单位</span>
+                                        <volist name="detail.honor.unit" id="honor_unit">
+                                            <input name='honor_unit[]' type="text" value='{$honor_unit}' readonly />
+                                        </volist>
+                                    </div>
+                                    <div>
+                                        <span>获奖日期</span>
+                                        <volist name="detail.honor.date" id="honor_date">
+                                            <input name='honor_date[]' type="text" value='{$honor_date}' readonly />
+                                        </volist>
+                                    </div>
+                                </div>
+                                <div class="resume resumes">
+                                    <h3>初中阶段特长发展及获奖情况</h3>
+                                    <div>
+                                        <span>特长项目</span>
+                                        <volist name="detail.specialty.name" id="specialty_name">
+                                            <input name='specialty_name[]' type="text" value='{$specialty_name}' readonly />
+                                        </volist>
+                                    </div>
+                                    <div>
+                                        <span>学习机构</span>
+                                        <volist name="detail.specialty.unit" id="specialty_unit">
+                                            <input name='specialty_unit[]' type="text" value='{$specialty_unit}' readonly />
+                                        </volist>
+                                    </div>
+                                    <div>
+                                        <span>获奖情况</span>
+                                        <volist name="detail.specialty.prize" id="specialty_unit">
+                                            <input name='specialty_prize[]' type="text" value='{$specialty_prize}' readonly />
+                                        </volist>
+                                    </div>
+                                    <div>
+                                        <span>获奖日期</span>
+                                        <volist name="detail.specialty.date" id="specialty_unit">
+                                            <input name='specialty_date[]' type="text" value='{$specialty_date}' readonly />
+                                        </volist>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Index/footer" />

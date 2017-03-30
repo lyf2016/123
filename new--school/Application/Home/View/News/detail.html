@@ -1,0 +1,62 @@
+<include file="Index/header" />
+
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/detail.css"/>
+<script src="__PUBLIC__/js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/js/reset.js" type="text/javascript" charset="utf-8"></script>
+<!--内容-->
+<div class="detail">
+    <div class="detailTop">
+        <div>
+            <h5>{$list['title']}</h5>
+            <i>By  {$list['person']}  Posted  {$list['create_time']}   In  {$list['classname']}</i>
+        </div>
+    </div>
+
+    <div class="detailBox clearfix">
+        <div class="detailBoxRight">
+            <div class="seat">
+                <i><a href="{:U('News/index')}">首页</a></i><i>></i>
+                <i><a href="{:U('News/newslist')}">校园新闻</a></i><i>></i>
+                <i><a href="{:U('News/detail', array('id'=>$list['id']))}">正文</a></i>
+            </div>
+
+            <div class="Text" style='margin-top:10px;'>
+                {$list['content']|htmlspecialchars_decode}
+            </div>
+        </div>
+        <div class="detailBoxLeft">
+            <h6>相关文章</h6>
+            <ul class="correlation">
+                <foreach name="article_list" item="vo">
+                    <li class="clearfix">
+                        <a href="{:U('News/detail', array('id'=>$vo['id']))}"><img src="__PUBLIC__/{$vo['picture']}" alt="" />
+                            <p style='overflow: hidden;'>{$vo['summary']|htmlspecialchars_decode}</p></a>
+                    </li>
+                </foreach>
+            </ul>
+
+            <div class="assortment">
+                <h6>分类</h6>
+                <ul>
+                    <foreach name="category_list" item="vo">
+                        <li><a href="{:U('News/newslist',array('news_category_id'=>$vo['id']))}">>&emsp;{$vo['name']}</a></li>
+                    </foreach>
+                </ul>
+            </div>
+            <notempty name="key_words">
+                <div class="pag">
+                    <h6>标签</h6>
+                    <div>
+                        <volist name='key_words' id='words'>
+                            <if condition="$words neq '' ">
+                            <a href="{:U('News/newslist',array('key_words'=>$words))}">{$words}</a>
+                            </if>
+                        </volist>
+                    </div>
+                </div>
+            </notempty>
+        </div>
+    </div>
+</div>
+
+<include file="Index/footer" />

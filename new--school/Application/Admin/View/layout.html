@@ -1,0 +1,20 @@
+<script type="text/javascript">
+	var login = "{:U('Login/index')}";
+	var customer_id = "{$_SESSION['customer_id']}";
+</script>
+<include file="Common:header" />
+<!-- 头部顶部 -->
+<include file="Common:header_area" />
+<if condition="$title neq '免费注册' && $title neq '会员登录' && $title neq '购物车' && $title neq '提交订单' && $title neq '订单提交成功'">
+	<!--搜索栏 包含购物车-->
+	<include file="Common:search" />
+	<!--搜索栏-->
+	<!--导航 包含分类-->
+	<include file="Common:navigation" />
+</if>
+<!--导航-->
+{__CONTENT__}
+<!-- 提示框 -->
+<include file="Common:prompt" />
+<!-- 底部 -->
+<include file="Common:footer" />

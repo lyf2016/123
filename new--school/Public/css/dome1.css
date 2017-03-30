@@ -1,0 +1,359 @@
+
+
+.banner{
+	width: 100%;
+}
+.banner img{
+	width:100%;
+	height:auto;
+	display: block;
+}
+
+.banners{
+	width:100%;
+	height:274px;
+	background: url(../img/banner1.jpg) center center no-repeat;
+}
+.ban{
+	width:530px;
+	margin: 0 auto;
+	padding: 52px 0;
+}
+.banners h3{
+	color: #fff;
+	font-size:28px;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	padding:0;
+	margin-bottom: 45px;
+}
+.banners h3 a{
+	display: inline-block;
+	width:120px;
+	height:35px;
+	line-height: 37px;
+	border: 1px solid #fff;
+	background: #ff7608;
+	border-radius:5px;
+	color: #fff;
+	font-size:16px;
+	margin-left: 15px;
+}
+.ban div{
+	width:530px;
+	margin: 0 auto 10px;
+	line-height: 24px;
+}
+.ban span{
+	float: left;
+	width:80px;
+	background: #fff;
+	border-radius:5px;
+	margin-right: 15px;
+	text-align: center;
+	font-weight: bold;
+	color: #046dba;
+}
+.ban p{
+	float: left;
+	width:435px;
+	color: #fff;
+}
+
+.box{
+	width:1183px;
+	padding-left:80px;
+	height:3861px;
+	margin: 60px auto 150px;
+	position:relative;
+}
+.left{
+	float:left;
+	width:480px;
+	height:3861px;
+	position:relative;
+}
+.Img{
+	width:651px;
+	float: right;
+}
+.Img img{
+	display: block;
+	width:100%;
+	height:auto;
+}
+
+.left h4{
+	width:294px;
+	line-height: 45px;
+	padding:0 30px;
+	margin:0 auto;
+	background:url(../img/bg.png) center center no-repeat;
+	border-radius:5px;
+	font-size:27px;
+	color:#fff;
+	text-align: center;
+}
+
+.first p,.center p{
+	text-indent: 2em;
+	font-size:14px;
+	color:#595757;
+	margin-top: 35px;
+	line-height: 25px;
+}
+.center,.first{
+	width:100%;
+	margin-top: 45px;
+}
+.center h5{
+	font-size:18px;
+	color:#046dba;
+	text-align: center;
+	margin-top: 24px;
+}
+.center div{
+	width:100%;
+	margin-top: 30px;
+}
+.center div b{
+	float:left;
+	color:#0b3190;
+	font-size:20px;
+}
+.center div p{
+	margin: 0;
+	font-size:20px;
+	float:left;
+	text-indent:0;
+}
+.last{
+	width:100%;
+	margin-top: 45px;
+}
+.last h4{
+	width:390px;
+	background: url(../img/bg2.png) center center no-repeat;
+}
+.last h5{
+	font-size:20px;
+	color:#0b3190;
+	margin: 20px 0;
+}
+.last div i{
+	font-style: normal;
+	color:#ed6d1f;
+}
+.last div p{
+	line-height: 25px;
+	font-size:12px;
+}
+.bottom{
+	width:555px;
+	position:absolute;
+	bottom:60px;
+	left:88px;
+	text-align: center;
+	font-size:24px;
+	line-height: 30px;
+	font-weight: bold;
+	color:#ed6d1f;
+}
+
+
+/*新增*/
+.newly{
+	width:100%;
+}
+.newly h4{
+	width:390px;
+	background: url(../img/bg2.png) center center no-repeat;
+}
+.newly h5{
+	font-size: 14px;
+	color:#0b3190;
+	margin-top: 26px;
+}
+.newly div{
+	line-height: 25px;
+	margin-bottom: 30px;
+	font-size: 14px;
+}
+.newly h6{
+	font-size: 14px;
+	color:#0b3190;
+}
+.newly  i{
+	font-style: normal;
+	color: #ed6d1f;
+}
+.newly div.contacts p{
+	font-size:18px;
+	color:#0b3190;
+	font-weight:bold;
+}
+.newly p{
+	font-size: 14px;
+	color:#595757;
+}
+
+
+
+
+
+
+
+
+
+/*表单*/
+.tab{
+	width:784px;
+	margin: 0 auto;
+	background: #fff;
+	color:#5b5b5b;
+	padding-bottom: 20px;
+}
+.tab .tabTop{
+	width:100%;
+	height:60px;
+	border-bottom: 1px solid #d8dde6;
+	background: #f0f2f5;
+	padding:20px 0;
+}
+.tab p{
+	margin: 5px 0;
+}
+.tab .tabTop p{
+	font-size: 18px;
+	margin-left: 70px;
+}
+.tab .tabTop h2{
+	font-size:28px;
+	margin-left: 70px;
+}
+.tab .ta,.tab .term,.tab .situation,.tab .resume{
+	line-height: 24px;
+	width:696px;
+	margin: 30px auto 0;
+	font-size: 14px;
+	
+}
+.tab .ta div{
+	margin: 5px 0;
+	display: inline-block;
+	width:229px;
+}
+.tab span{
+	display: inline-block;
+	width:60px;
+	line-height: 26px;
+	margin-right: 5px;
+}
+.tab select{
+	width:310px;
+	border: 1px solid #b0b8ca;
+	height: 26px;
+	line-height: 26px;
+}
+.tab input{
+	width:146px;
+	height:24px;
+	line-height: 26px;
+	border: 1px solid #b0b8ca;
+	text-align: center;
+}
+.tab .ta input.rad{
+	width:14px;
+	height:14px;
+	vertical-align:middle;
+	margin: -2px 5px 0;
+}
+.tab b{
+	font-weight: normal;
+}
+.tab .age select{
+	width:72px;
+}
+.tab .term p{
+	display: inline-block;
+}
+.tab .term div,.tab .situation div,.tab .resume div{
+	display: inline-block;
+}
+.tab .term div span{
+	text-align: center;
+}
+.tab .situation{
+	text-align: center;
+}
+.tab h3{
+	font-size:14px;
+	text-align: center;
+	line-height:50px;
+}
+.tab .situation div{
+	width:60px;
+	margin: 0 6px;
+	
+}
+.tab .situation div span{
+	width: 100%;
+	display: block;
+}
+.tab .situation div input{
+	width: 100%;
+}
+
+.tab .resume div{
+	width:174px;
+	text-align: center;
+}
+.tab .resume div span{
+	width:100%;
+}
+.tab .resume div input{
+	width:100%;
+	margin-bottom: 5px;
+}
+.tab .resume div.cen{
+	text-align: center;
+	width:320px;
+	margin: 0 10px;
+}
+.tab .resume div.cen input{
+	width:318px;
+}
+
+.tab i{
+	font-style:normal;
+	color:#F00;
+}
+.tab .resumes div{
+	width:171px;
+}
+.tab .zhu{
+	line-height: 24px;
+	width:696px;
+	margin: 10px auto 0;
+	font-size: 14px;
+}
+.tab .btns{
+	text-align: center;
+	margin: 15px 0;
+}
+.tab .btns span,.tab .btns button{
+	border: 1px solid #cccccc;
+	width:120px;
+	display: inline-block;
+	line-height: 35px;
+	margin: 0 20px;
+	font-size:16px;
+	cursor:pointer;
+}
+.tab .btns button{
+	border: 1px solid #007aff;
+	background: #007aff;
+	color: #fff;
+}
+

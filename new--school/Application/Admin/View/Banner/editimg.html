@@ -1,0 +1,120 @@
+<include file="Index/header" />
+<title>添加图片</title>
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+
+    <include file="Index/left_menu" />
+
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+
+            <!-- BEGIN PAGE HEADER-->
+            <div class="page-bar">
+                <ul class="page-breadcrumb">
+                    <li>
+                        <i class="fa fa-home"></i>
+                        <a href="{:U('Admin/Index/index')}">主页</a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="{:U('Admin/Banner/showimg')}">图片管理</a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- END PAGE HEADER-->
+            <!-- BEGIN PAGE CONTENT-->
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="form-horizontal form-row-seperated" enctype="multipart/form-data" action="{:U('Banner/doedit')}" method="post">
+                        <div class="portlet">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="fa fa-shopping-cart"></i>轮播图修改
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="tabbable">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active">
+                                            <a href="#" data-toggle="tab">
+                                                轮播图修改</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content no-space">
+                                        <div class="tab-pane active">
+                                            <div class="form-body">
+
+                                                <div class="form-group">
+                                                    <label class="col-md-2 control-label">图片显示位置: <span class="required">*</span>
+                                                    </label>
+                                                    <div class="col-md-5">
+                                                        <input type="radio"  name="local"   value="4" checked />首页
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-md-2 control-label">图片标题:
+                                                    </label>
+                                                    <div class="col-md-5">
+                                                        <input type="text" class="form-control"  name="title"  value="{$list.title}" >
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-md-2 control-label">标题图片: <span class="required">*</span>
+                                                    </label>
+                                                    <div class="col-md-5">
+                                                        <img src="__PUBLIC__/{$list.src}" style="width: 100px;">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-md-2 control-label">播放顺序:
+                                                    </label>
+                                                    <div class="col-md-5">
+                                                        <input type="text" class="form-control"  name="sort"  value="{$list.sort}" >
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-md-2 control-label">跳转链接:
+                                                    </label>
+                                                    <div class="col-md-5">
+                                                        <input type="text" class="form-control"  name="link"  value="{$list.link}" >
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-group">
+                                                    <label class="col-md-2 control-label">图片: <span class="required">*</span>
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="file"  name="showimg" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="actions btn-set col-sm-offset-2">
+                                                    <input hidden="hidden" value="{$list.id}" name="id">
+                                                    <input hidden="hidden" value="{$list.src}" name="src" >
+                                                    <button  class="btn yellow"> <i class="fa fa-check"></i>修改</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- END PAGE CONTENT-->
+        </div>
+    </div>
+    <!-- END CONTENT -->
+
+</div>
+<!-- END CONTAINER -->
+
+<include file="Admin/footer" />

@@ -1,0 +1,192 @@
+<include file="Index/header" />
+<title>发现文章管理</title>
+<script type="text/javascript" src="__PUBLIC__/kindeditor4110/kindeditor.js" charset="utf-8"></script>
+<script charset="utf-8" src="__PUBLIC__/kindeditor4110/lang/zh_CN.js"></script>
+<script charset="utf-8" src="__PUBLIC__/kindeditor4110//themes/default/default.css"></script>
+<script type="text/javascript">
+
+    KindEditor.ready(function (K) {
+        // var editor = K.create('textarea[name="description"]');
+        var editor = K.create('textarea[name="desc"]', {
+            afterBlur: function () {
+                this.sync();
+            }
+        });
+    });
+</script>
+<div class="page-container">
+
+    <include file="Index/header" />
+    <title>发现文章管理</title>
+    <link href="__PUBLIC__/static/media/css/select2.css" rel="stylesheet" type="text/css"/>
+
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+
+        <include file="Index/left_menu" />
+
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <div class="page-content">
+
+                <!-- BEGIN PAGE HEADER-->
+                <div class="page-bar">
+                    <ul class="page-breadcrumb">
+                        <li>
+                            <i class="fa fa-home"></i>
+                            <a href="{:U('Admin/Index/index')}">主页</a>
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <a href="{:U('Admin/Discover/actione')}">发现文章管理</a>
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- END PAGE HEADER-->
+
+                <!-- BEGIN PAGE CONTENT-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="form-horizontal form-row-seperated" enctype="multipart/form-data" action="{:U('Discover/doeditacti')}" method="post">
+                            <div class="portlet">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <i class="fa fa-shopping-cart"></i>发现文章修改
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <div class="tabbable">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active">
+                                                <a href="#" data-toggle="tab">
+                                                    发现文章修改</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content no-space">
+                                            <div class="tab-pane active">
+                                                <div class="form-body">
+
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 control-label">文章标题: <span class="required">*</span>
+                                                        </label>
+                                                        <div class="col-md-5">
+                                                            <input type="hidden" name="id" value="{$Think.get.id}">
+                                                            <input type="text" class="form-control" maxlength="30" value="{$list.title}"  name="title" placeholder="文章标题">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 control-label">标题图片: <span class="required">*</span>
+                                                        </label>
+                                                        <div class="col-md-3">
+                                                            <img src="__PUBLIC__/{$list.picture}" style="width: 100px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 control-label">修改图片: <span class="required">*</span>
+                                                        </label>
+                                                        <div class="col-md-3">
+                                                            <input type="file"  name="title_pic" placeholder="">
+                                                            <input type="hidden"  name="pic"   value="{$list.picture}">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 control-label">推荐至首页: <span class="required">*</span>
+                                                        </label>
+                                                        <div class="col-md-5">
+                                                            <input type="radio"  name="recommend"  value="1"  <if condition="$list['recommend'] eq '1'"> checked="checked"</if>/>是
+                                                            <input type="radio"  name="recommend"  value="2" <if condition="$list['recommend'] eq '2'"> checked="checked"</if>/>否
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 control-label">文章类型: <span class="required">*</span>
+                                                        </label>
+                                                        <div class="col-md-5">
+                                                            <select class="form-control"  name="type" placeholder="文章类型" style="width:415px;">
+                                                                <option value="0">--请选择--</option>
+                                                                <option value="1" <if condition="$list['type'] eq 1" > selected</if>>特辑 图像尺寸320*360</option>
+                                                                <option value="2" <if condition="$list['type'] eq 2" > selected</if>>风物志 图像尺寸640*360</option>
+                                                                <option value="3" <if condition="$list['type'] eq 3" > selected</if>>科学教研 图像尺寸320*360</option>
+                                                                <option value="4" <if condition="$list['type'] eq 4" > selected</if>>对外交流 图像尺寸320*360</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                    <label class="col-md-2 control-label">首页 640*360 的图片(风物志): <span class="required">*</span>
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="file"  name="large_pic" placeholder="">
+                                                        <input type="hidden"  name="home_large_pic"   value="{$list.home_large_pic}">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-2 control-label">首页 320*360 的图片: <span class="required">*</span>
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="file"  name="small_pic" placeholder="">
+                                                        <input type="hidden"  name="home_small_pic"   value="{$list.home_small_pic}">
+                                                    </div>
+                                                </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 control-label">分类: <span class="required">*</span>
+                                                        </label>
+                                                        <div class="col-md-5">
+                                                            <select class="form-control" maxlength="6" name="news_category" placeholder="分类" style="width:415px;">
+                                                                <option value="0">--请选择--</option>
+                                                                <volist name="category_list" id="vo">
+                                                                    <option value="{$vo.id}" <if condition="$vo['id'] eq $list['news_category_id']">selected="selected"</if> >{$vo.name}</option>
+                                                                </volist>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 control-label">关键词: <span class="required">*</span>
+                                                        </label>
+                                                        <div class="col-md-5">
+                                                            <input type="text" class="form-control" maxlength="100" value="{$list.key_words}" name="key_words" placeholder="关键词（用英文逗号,隔开）">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 control-label">发布人: <span class="required">*</span>
+                                                        </label>
+                                                        <div class="col-md-5">
+                                                            <input type="text" class="form-control" value="{$list.person}"  maxlength="6" name="person" placeholder="发布人">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-2">简介: <span class="required">*</span></label>
+                                                        <div class="controls col-md-5">
+                                                            <textarea id=""  cols="45%" rows="10" class="small " name="summary">{$list.summary}</textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 control-label">文章内容: <span class="required">*</span>
+                                                        </label>
+                                                        <div class="col-md-5">
+                                                            <textarea  name="desc" style="width: 850px; height: 350px;">{$list.content}</textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="actions btn-set col-sm-offset-2">
+                                                        <button  class="btn yellow"> <i class="fa fa-check"></i>修改</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- END PAGE CONTENT-->
+            </div>
+        </div>
+    </div>
+    <!-- END CONTAINER -->
+
+
+    <include file="Index/footer" />

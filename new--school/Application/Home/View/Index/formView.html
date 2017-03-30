@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>卓越学院暑期训练营</title>
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/applyReset.css"/>
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/dome1.css"/>
+    </head>
+    <body>
+
+        <div class="tab">
+            <div class="tabTop">
+                <p>华东师范大学第二附属中学乐东黄流中学</p>
+                <h2>卓越学院-暑期训练营报名表</h2>
+            </div>
+            <form id="submit_form" name= "form_list" method = 'post'  action = "{:U('Home/Index/formPost')}" >
+                <div class="ta">
+                    <p>
+                        <span>初中学校</span>
+                        <input type='text' name='school_name' />
+                    </p>
+                    <div>
+                        <span>姓&emsp;&emsp;名</span>
+                        <input name='student_name' type="text" />
+                    </div>
+                    <div>
+                        <span>性&emsp;&emsp;别</span>
+                        <input name='sex' type="radio" class="rad" checked='checked' value="1"/><b>男</b>
+                        <input name='sex' type="radio" class="rad" value="2"/><b>女</b>
+                    </div>
+                    <div>
+                        <span>民&emsp;&emsp;簇</span>
+                        <input name='nation' type="text" />
+                    </div>
+                    <div class="age">
+                        <span>年&emsp;&emsp;龄</span>
+                        <select name="age_year" id="" onChange="YYYYDD(this.value)" >
+                        </select>
+                        <select name="age_month" id="">
+                        </select>
+                    </div>
+                    <div>
+                        <span>联络手机</span>
+                        <input name='phone' type="text" />
+                    </div>
+                    <div>
+                        <span>团&emsp;&emsp;员</span>
+                        <input name='is_league' type="radio" class="rad" value="1"/><b>是</b>
+                        <input name='is_league' type="radio" class="rad" checked='checked' value="2"/><b>否</b>
+                    </div>
+                    <div>
+                        <span>担任职务</span>
+                        <input name='duty' type="text" />
+                    </div>
+                    <div>
+                        <span>健康状态</span>
+                        <input name='health' type="text" />
+                    </div>
+                    <div>
+                        <span>家庭地址</span>
+                        <input name='address' type="text" />
+                    </div>
+                </div>
+                <div class="term">
+                    <div>
+                        <p>初二第二学期综合成绩在年级的排名</p>
+                        <div>
+                            <span>期中</span>
+                            <input name='junior_two_middle' type="text" />
+                        </div>
+                        <div>
+                            <span>期末</span>
+                            <input name='junior_two_end' type="text" />
+                        </div>
+                    </div>
+                    <div>
+                        <p>初三第一学期综合成绩在年级的排名</p>
+                        <div>
+                            <span>期中</span>
+                            <input name='junior_three_middle' type="text" />
+                        </div>
+                        <div>
+                            <span>期末</span>
+                            <input name='junior_three_end' type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="situation">
+                    <h3>初三第一次县模拟考情况</h3>
+                    <div>
+                        <span>数学</span>
+                        <input name='math' type="text" />
+                    </div>
+                    <div>
+                        <span>英语</span>
+                        <input name='english' type="text" />
+                    </div>
+                    <div>
+                        <span>语文</span>
+                        <input name='chinese' type="text" />
+                    </div>
+                    <div>
+                        <span>物理</span>
+                        <input name='physical' type="text" />
+                    </div>
+                    <div>
+                        <span>化学</span>
+                        <input name='chemistry' type="text" />
+                    </div>
+                    <div>
+                        <span>总分</span>
+                        <input name='total' type="text" />
+                    </div>
+                    <div>
+                        <span>年级排名</span>
+                        <input name='grade_ranking' type="text" />
+                    </div>
+                    <div>
+                        <span>市县排名</span>
+                        <input name='city_ranking' type="text" />
+                    </div>
+                </div>
+                <div class="resume">
+                    <h3>本人学习简历</h3>
+                    <div>
+                        <span>起止年月(小学起)</span>
+                        <input name='learn_resume_date[]' type="text" />
+                        <input name='learn_resume_date[]' type="text" />
+                        <input name='learn_resume_date[]' type="text" />
+                    </div>
+                    <div class="cen">
+                        <span>学习单位</span>
+                        <input name='learn_resume_unit[]' type="text" />
+                        <input name='learn_resume_unit[]' type="text" />
+                        <input name='learn_resume_unit[]' type="text" />
+                    </div>
+                    <div>
+                        <span>证明人</span>
+                        <input name='learn_resume_prove[]' type="text" />
+                        <input name='learn_resume_prove[]' type="text" />
+                        <input name='learn_resume_prove[]' type="text" />
+                    </div>
+                </div>
+                <div class="resume">
+                    <h3>初中阶段获市县级及以上荣誉情况 <i>(按获奖级别从高到低排序)</i></h3>
+                    <div>
+                        <span>荣誉名称</span>
+                        <input name='honor_name[]' type="text" />
+                        <input name='honor_name[]' type="text" />
+                        <input name='honor_name[]' type="text" />
+                    </div>
+                    <div class="cen">
+                        <span>发证单位</span>
+                        <input name='honor_unit[]' type="text" />
+                        <input name='honor_unit[]' type="text" />
+                        <input name='honor_unit[]' type="text" />
+                    </div>
+                    <div>
+                        <span>获奖日期</span>
+                        <input name='honor_date[]' type="text" />
+                        <input name='honor_date[]' type="text" />
+                        <input name='honor_date[]' type="text" />
+                    </div>
+                </div>
+                <div class="resume resumes">
+                    <h3>初中阶段特长发展及获奖情况</h3>
+                    <div>
+                        <span>特长项目</span>
+                        <input name='specialty_name[]' type="text" />
+                        <input name='specialty_name[]' type="text" />
+                        <input name='specialty_name[]' type="text" />
+                    </div>
+                    <div>
+                        <span>学习机构</span>
+                        <input name='specialty_unit[]' type="text" />
+                        <input name='specialty_unit[]' type="text" />
+                        <input name='specialty_unit[]' type="text" />
+                    </div>
+                    <div>
+                        <span>获奖情况</span>
+                        <input name='specialty_prize[]' type="text" />
+                        <input name='specialty_prize[]' type="text" />
+                        <input name='specialty_prize[]' type="text" />
+                    </div>
+                    <div>
+                        <span>获奖日期</span>
+                        <input name='specialty_date[]' type="text" />
+                        <input name='specialty_date[]' type="text" />
+                        <input name='specialty_date[]' type="text" />
+                    </div>
+                </div>
+                <div class="resume resumes">
+                    <p style='height:26px;'>
+                        <span style="float:left;line-height: 26px;">验证码</span>
+                        <input name='code' type="text" style="float:left;line-height: 26px;margin-right:10px;"/>
+                        <img id='code' src="{:U('Home/Index/verifyCode')}" style="float:left;height: 26px;"/>
+                    </p>
+                </div>
+                <input type="hidden" name="verify_code" value="{$code}"/>
+            </form>
+            <div class="zhu"><i>注：1.　以上信息必须本着诚信严肃的态度填写，发现不符，责任自负。</i></div>
+            <div class="btns">
+                <span>取消</span>
+                <button id="sure" type="button">确定</button>
+            </div>
+        </div>
+    </body>
+    <script src="__PUBLIC__/js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#code').click(function(){
+                var time = new Date().getTime();
+                var code_url = "{:U('Home/Index/verifyCode')}" + '&time=' + time;
+                $(this).attr({'src':code_url});
+            });
+        });
+        var index = parent.layer.getFrameIndex(window.name);
+        $('.btns span').on('click', function () {
+            parent.layer.close(index);
+        });
+
+        $(document).on('click', '#sure', function () {
+            $('#submit_form').submit();
+        });
+
+        function YYYYMMDDstart() {
+            var y = new Date().getFullYear() - 13;
+            for (var i = (y - 5); i < (y + 5); i++){  
+                document.form_list.age_year.options.add(new Option(" " + i + " 年", i));
+            }
+
+            //赋月份的下拉框   
+            for (var i = 1; i < 13; i++)
+                document.form_list.age_month.options.add(new Option(" " + i + " 月", i));
+
+            document.form_list.age_year.value = y;
+            document.form_list.age_month.value = new Date().getMonth() + 1;
+            if (new Date().getMonth() == 1 && IsPinYear(YYYYvalue))
+                n++;
+        }
+        if (document.attachEvent)
+            window.attachEvent("onload", YYYYMMDDstart);
+        else
+            window.addEventListener('load', YYYYMMDDstart, false);
+        function YYYYDD(str) {
+            var MMvalue = document.form_list.age_month.options[document.form_list.age_month.selectedIndex].value;
+        }
+    </script>
+</html>

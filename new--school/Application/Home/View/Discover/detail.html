@@ -1,0 +1,73 @@
+<include file="Index/header" />
+
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/detail.css"/>
+<script src="__PUBLIC__/js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/js/reset.js" type="text/javascript" charset="utf-8"></script>
+<!--内容-->
+<div class="detail">
+    <div class="detailTop">
+        <div>
+            <h5>{$list['title']}</h5>
+        </div>
+    </div>
+
+    <div class="detailBox clearfix">
+        <div class="detailBoxRight">
+            <div class="seat">
+                <i><a href="{:U('News/index')}">首页</a></i><i>></i>
+                <i><a href="{:U('Discover/discoverList', array('id'=>$list['id'],'type'=>$list['type']))}">发现</a></i><i>></i>
+                <i><a href="javavoid:void(0);">内容</a></i>
+            </div>
+
+            <div class="Text" style='margin-top:10px;'>
+                {$list['content']|htmlspecialchars_decode}
+            </div>
+        </div>
+        <div class="detailBoxLeft">
+            <h6>热点</h6>
+            <ul class="correlation">
+                <foreach name="article_list" item="vo">
+                    <li class="clearfix">
+                        <a href="{:U('Discover/detail', array('id'=>$vo['id']))}"><img src="__PUBLIC__/{$vo['picture']}" alt="" />
+                            <p class="textflow" style='overflow: hidden;'>{$vo['summary']|htmlspecialchars_decode}</p></a>
+                    </li>
+                </foreach>
+            </ul>
+
+            <div class="assortment">
+                <h6>分类</h6>
+                <ul>
+                    <foreach name="category_list" item="vo">
+                        <li><a href="{:U('Discover/detail',array('id'=>$vo['id']))}">>&emsp;{$vo['name']}</a></li>
+                    </foreach>
+                </ul>
+            </div>
+            <notempty name="key_words">
+                <div class="pag">
+                    <h6>标签</h6>
+                    <div>
+                        <volist name='key_words' id='words'>
+                            <if condition="$words neq '' ">
+                                <a href="{:U('Discover/discoverList',array('key_words'=>$words, 'type'=>$list['type']))}">{$words}</a>
+                            </if>
+                        </volist>
+                    </div>
+                </div>
+            </notempty>
+        </div>
+    </div>
+</div>
+
+<include file="Index/footer" />
+<script type="text/javascript">
+    $(function () {
+        $(".textflow").each(function () {
+            //字符个数
+            var maxwidth = 50;
+            if ($(this).text().length > maxwidth) {
+                $(this).text($(this).text().substring(0, maxwidth));
+                $(this).html($(this).html() + "...");
+            }
+        });
+    });
+</script>

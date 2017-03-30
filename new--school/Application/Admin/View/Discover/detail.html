@@ -1,0 +1,108 @@
+<include file="Index/header" />
+<title>发现文章管理</title>
+<link href="__PUBLIC__/static/media/css/select2.css" rel="stylesheet" type="text/css"/>
+
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+
+    <include file="Index/left_menu" />
+
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+
+            <!-- BEGIN PAGE HEADER-->
+            <div class="page-bar">
+                <ul class="page-breadcrumb">
+                    <li>
+                        <i class="fa fa-home"></i>
+                        <a href="{:U('Admin/Index/index')}">主页</a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="{:U('Admin/Discover/action')}">发现文章管理</a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- END PAGE HEADER-->
+
+            <!-- BEGIN PAGE CONTENT-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="portlet">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-shopping-cart"></i>发现文章详情
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="tabbable">
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="{:U('Admin/Discover/detail')}" data-toggle="tab">
+                                            发现文章详情</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content no-space">
+                                    <div class="tab-pane active">
+                                        <div class="form-body">
+                                            <div >
+                                                <div class="pull-left col-md-1 col-md-offset-1">标题 :</div>
+                                                <div class="pull-left" style="width:850px;margin-bottom:15px;">
+                                                    {$list.title}
+                                                </div>
+                                            </div>
+                                            <div style="clear:both;"></div>
+                                            <div >
+                                                <div class="pull-left col-md-1 col-md-offset-1">图片:</div>
+                                                <div class="pull-left" style="width:850px;margin-bottom:15px;">
+                                                    <img src="__PUBLIC__/{$list.picture}" style="width: 100px;">
+                                                </div>
+                                            </div>
+                                            <div style="clear:both;"></div>
+
+                                            <div >
+                                                <div class="pull-left col-md-1 col-md-offset-1">发布人:</div>
+                                                <div class="pull-left" style="width:850px;margin-bottom:15px;">
+                                                    {$list.person}
+                                                </div>
+                                            </div>
+                                            <div style="clear:both;"></div>
+
+                                            <div >
+                                                <div class="pull-left col-md-1 col-md-offset-1">文章正文: </div>
+                                                <div class="pull-left" style="width:850px;margin-bottom:15px;">
+                                                    {$list.content|htmlspecialchars_decode}
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">推荐至首页: <span class="required">*</span>
+                                                </label>
+                                                <div class="col-md-5">
+                                                    <input type="radio"  name="recommend"  value="1" checked />是
+                                                    <input type="radio"  name="recommend"  value="2" />否
+                                                </div>
+                                            </div>
+                                            <div style="clear:both;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- END PAGE CONTENT-->
+        </div>
+    </div>
+    <!-- END CONTENT -->
+
+</div>
+<!-- END CONTAINER -->
+
+
+<include file="Index/footer" />

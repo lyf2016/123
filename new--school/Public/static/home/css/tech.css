@@ -1,0 +1,89 @@
+@charset "utf-8";
+body{
+    margin:0;
+    padding:0;
+    background:#FFFFFF;
+    font-family: "微软雅黑";
+}
+.js-box-one{
+    width:1076px;
+    height:50px;
+    margin:15px auto 15px auto;
+    border:1px solid #cccccc;
+    padding:15px;
+    font-size:14px;
+    color:#236a5a;
+}
+.js-box-one p{
+    margin:0;
+    line-height:23px;
+}
+.js-box-two{
+    width:1110px;
+    height:890px;
+    margin:0 auto;
+}
+.js-box-two>div{
+    width:358px;
+    height:275px;
+    float:left;
+    margin-bottom:15px;
+}
+.box-01{
+    background:url('../image/new/js01_03.jpg') no-repeat;
+}
+.box-02{
+    background:url('../image/new/js01_05.jpg') no-repeat;
+}
+.box-03{
+    background:url('../image/new/js01_07.jpg') no-repeat;
+}
+.box-04{
+    background:url('../image/new/js01_12.jpg') no-repeat;
+}
+.box-05{
+    background:url('../image/new/js01_13.jpg') no-repeat;
+}
+.box-06{
+    background:url('../image/new/js01_14.jpg') no-repeat;
+}
+.box-07{
+    background:url('../image/new/js01_18.jpg') no-repeat;
+}
+.box-08{
+    background:url('../image/new/js01_19.jpg') no-repeat;
+}
+.box-09{
+    background:url('../image/new/js01_20.jpg') no-repeat;
+}
+.box-01:hover{
+    background:url('../image/new/js02_03.jpg') no-repeat;
+}
+.box-02:hover{
+    background:url('../image/new/js02_05.jpg') no-repeat;
+}
+.box-03:hover{
+    background:url('../image/new/js02_07.jpg') no-repeat;
+}
+.box-04:hover{
+    background:url('../image/new/js02_12.jpg') no-repeat;
+}
+.box-05:hover{
+    background:url('../image/new/js02_13.jpg') no-repeat;
+}
+.box-06:hover{
+    background:url('../image/new/js02_14.jpg') no-repeat;
+}
+.box-07:hover{
+    background:url('../image/new/js02_18.jpg') no-repeat;
+}
+.box-08:hover{
+    background:url('../image/new/js02_19.jpg') no-repeat;
+}
+.box-09:hover{
+    background:url('../image/new/js02_20.jpg') no-repeat;
+}
+.box-02,.box-05,.box-08{
+    margin-left:17px;
+    margin-right:17px;
+}

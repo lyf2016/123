@@ -1,0 +1,58 @@
+@charset "utf-8";
+body{
+    margin:0;
+    padding:0;
+    background:#FFFFFF;
+    font-family: "微软雅黑";
+}
+.gy-img{
+	width:1104px;
+	height:200px;
+	margin:0 auto 10px auto;
+}
+.gy-list{
+	width:1104px;
+	height:auto;
+	zoom:1;
+	overflow:hidden;
+	margin:0 auto 10px auto;
+}
+.gy-list-box{
+	width:336px;
+	height:276px;
+	margin:0 3px 15px 3px;
+	border:1px solid #cccccc;
+	padding:12px;
+	float:left;
+}
+.box-box{
+	width:336px;
+	height:224px;
+	position:relative;
+}
+.gy-img-one{
+    width:336px;
+	height:224px;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.gy-img-two{
+	display:none;
+    width:336px;
+	height:224px;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:10;
+}
+.gy-new{
+	text-align:center;
+	font-size:12px;
+	color:#9b9b9b;
+	cursor:pointer;
+	margin-top:12px;
+}
+.gy-new p{
+	margin:5px 0 0 0;
+}

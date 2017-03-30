@@ -1,0 +1,128 @@
+<include file="Index/header" />
+<title>新闻列表</title>
+<link href="__PUBLIC__/static/media/css/select2.css" rel="stylesheet" type="text/css"/>
+
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+
+    <include file="Index/left_menu" />
+
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+
+            <!-- BEGIN PAGE HEADER-->
+            <div class="page-bar">
+                <ul class="page-breadcrumb">
+                    <li>
+                        <i class="fa fa-home"></i>
+                        <a href="{:U('Admin/Index/index')}">主页</a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="{:U('Admin/News/actione')}">新闻列表</a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- END PAGE HEADER-->
+
+            <!-- BEGIN PAGE CONTENT-->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Begin: life time stats -->
+                    <div class="portlet">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-gift"></i>新闻列表
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div style="margin-bottom:10px;">
+                                <a href="{:U('News/addactione')}" class="btn btn-success">添加新闻</a>
+                            </div>
+                            <div style="margin-bottom:10px;">
+                                <form name= "form_list" method='post' action = "{:U('Admin/News/actione')}">
+                                    <span>文章标题：</span><input name='title' value="{$post_data['title']}" />
+                                    <span>关键词&nbsp;：</span><input name='key_words' value="{$post_data['key_words']}" />
+                                    <span>分&nbsp;&nbsp类：</span>
+                                    <select  name="news_category_id" value="{$post_data['news_category_id']}"> 
+                                        <option value="0">--请选择--</option>
+                                        <volist name="category_list" id="vo">
+                                            <option value="{$vo.id}" <if condition="$vo['id'] eq $post_data['news_category_id']">selected="selected"</if> >{$vo.name}</option>
+                                        </volist>
+                                    </select>
+                                    <button type='submit'> 搜索 </button>
+                                </form>
+                            </div>
+                            <div class="table-container">
+                                <table class="table table-striped table-bordered table-hover" id="datatable_products">
+                                    <thead>
+                                        <tr role="row" class="heading">
+                                            <th width="10%">
+                                                序号
+                                            </th>
+                                            <th width="10%">
+                                                文章发布时间
+                                            </th>
+                                            <th width="10%">
+                                                文章标题
+                                            </th>
+                                            <th width="10%">
+                                                标题图
+                                            </th>
+
+                                            <th width="10%">
+                                                操作
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <volist name="list" id="vo" key="k">
+                                        <tr>
+                                            <td width="10%">
+                                                {$firstRow + $k}
+                                            </td>
+                                            <td width="10%">
+                                                {$vo.create_time}   
+                                            </td>
+                                            <td width="10%">
+                                                {$vo.title}   
+                                            </td>
+                                            <td width="10%">
+                                                <img src="__PUBLIC__/{$vo.picture}" style="width: 100px;">    
+                                            </td>
+
+                                            <td width="20%">
+                                                <a href="{:U('Home/News/detail', array('id'=>$vo['id']))}" class="btn blue">详情</a>
+                                                <a href="{:U('News/editacti', array('id'=>$vo['id']))}" class="btn btn-success">修改</a>
+                                                <a href="{:U('News/delarticle', array('id'=>$vo['id']))}" class="btn btn-danger"   onclick="if (confirm('确定删除?') == false)
+                                                            return false;">删除</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+
+                                        </tr>
+                                    </volist>
+                                    </tbody>
+                                    <tfoot>
+                                    <td colspan="6">{$page}</td>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End: life time stats -->
+                </div>
+            </div>
+            <!-- END PAGE CONTENT-->
+        </div>
+    </div>
+    <!-- END CONTENT -->
+
+</div>
+<!-- END CONTAINER -->
+
+<include file="Index/footer" />
